@@ -37,3 +37,9 @@ Puedes instalar las dependencias con:
 
 ```bash
 pip install pandas openpyxl pyinstaller
+
+# GestorSensores/
+├─ README.md                  # Este archivo
+├─ main.py                    # Código principal de la aplicación
+└─ requirements.txt           # Requerimientos (opcional)
+
