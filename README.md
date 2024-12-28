@@ -34,28 +34,30 @@ La aplicación se desarrolla con **Tkinter** como interfaz gráfica y utiliza **
   - `pyinstaller` (solo si deseas crear un ejecutable)
 
 Puedes instalar las dependencias con:
-
-```bash
+```
 pip install pandas openpyxl pyinstaller
+```
+#estructura-del-proyecto
+```bash
+
 
 # GestorSensores/
 ├─ README.md                  # Este archivo
 ├─ main.py                    # Código principal de la aplicación
 └─ requirements.txt           # Requerimientos (opcional)
 
-
-Uso de la aplicación
-Instalación
+```
+# Uso de la aplicación
+## Instalación
 Clonar o descargar este repositorio.
 
 Asegurarte de tener las librerías necesarias instaladas:
 
-bash
+
 Copiar código
 pip install -r requirements.txt
 Si no tienes un requirements.txt, instala manualmente:
 
-bash
 Copiar código
 pip install pandas openpyxl
 Verifica que Python esté en tu PATH. Para comprobarlo, abre una terminal y ejecuta:
@@ -65,7 +67,7 @@ Copiar código
 python --version
 Debería mostrar tu versión de Python.
 
-Ejecución
+# Ejecución
 Navega a la carpeta donde se encuentra main.py.
 Ejecuta:
 bash
@@ -92,14 +94,14 @@ Si deseas distribuir la aplicación como un archivo ejecutable (por ejemplo, en 
 
 Instala PyInstaller (si aún no lo tienes):
 
-bash
-Copiar código
+´´´bash
+
 pip install pyinstaller
 Navega a la carpeta que contiene main.py.
 
 Ejecuta:
 
-bash
+´´´bash
 Copiar código
 pyinstaller --onefile main.py
 --onefile creará un único archivo ejecutable en la carpeta dist.
@@ -113,12 +115,12 @@ bash
 Copiar código
 dist\main.exe
 En Linux:
-bash
+´´´bash
 Copiar código
 ./dist/main
 Nota: Asegúrate de incluir cualquier archivo adicional (como íconos o archivos de configuración) si tu aplicación los requiere. Puedes personalizar el spec file que genera PyInstaller para agregar otros recursos.
 
-Notas adicionales
+# Notas adicionales
 Recalcular SENSOR_ID:
 
 El código ilustra cómo SENSOR_ID se construye concatenando columnas (p.ej. SERIE, CAMPO, GRUPO_CAMPO, SENSOR, CENTRO_COSTO).
@@ -129,4 +131,6 @@ Cada vez que actualizas un sensor vigente, se inactiva la fila anterior y se cre
 DateTime:
 
 Asegúrate de que las columnas de fecha (FECHA INICIO, FECHA FIN) sean de tipo datetime en tu Excel para evitar problemas de formato.
+
+---
 ¡Listo! Con esto tu proyecto de Gestión de Sensores está preparado para su uso y/o para generar un ejecutable distribuible con PyInstaller. Si tienes dudas o deseas modificar la lógica interna, revisa y adapta el contenido de main.py. ¡Éxito!
